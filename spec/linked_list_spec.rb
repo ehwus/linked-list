@@ -21,3 +21,7 @@ describe Node do
     expect(test.next_node.next_node.next_node.value).to eq("4")
   end
 end
+
+describe LinkedList do
+
+end
