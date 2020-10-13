@@ -84,4 +84,8 @@ class LinkedList
     end
     false
   end
+
+  def find(search_term)
+
+  end
 end
