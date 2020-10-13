@@ -117,5 +117,14 @@ describe LinkedList do
       list.pop
       expect(list.head).to eq(nil)
     end
+
+    it "removes head of three item list" do
+      list = LinkedList.new(Node.new(1))
+      list.append(Node.new(2))
+      list.append(Node.new(3))
+      list.pop
+      expect(list.head.value).to eq(2)
+      expect(list.tail.value).to eq(3)
+    end
   end
 end
