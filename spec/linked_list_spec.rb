@@ -135,8 +135,8 @@ describe LinkedList do
     end
 
     it "returns true searching for a node that exists" do
-      list = LinkedList.new(2)
-      expect(empty_list.contains?(2)).to eq(true)
+      list = LinkedList.new(Node.new(2))
+      expect(list.contains?(2)).to eq(true)
     end
   end
 end
