@@ -62,8 +62,12 @@ class LinkedList
   end
 
   def pop
-    if @head
+    return if @head.nil?
+
+    if @head.next_node.nil?
       @head = nil
+    else
+      @head = @head.next_node
     end
   end
 end
