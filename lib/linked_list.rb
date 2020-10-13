@@ -78,7 +78,7 @@ class LinkedList
 
     pointer = @head
     until pointer.next_node.nil?
-      return true if pointer.value == search_term
+      return true if pointer.next_node.value == search_term
 
       pointer = pointer.next_node
     end
@@ -90,5 +90,13 @@ class LinkedList
 
     index = 0
     return index if @head.value == search_term
+
+    pointer = @head
+    until pointer.next_node.nil?
+      index += 1
+      return index if pointer.next_node.value == search_term
+
+      pointer = pointer.next_node
+    end
   end
 end

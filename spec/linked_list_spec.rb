@@ -150,5 +150,13 @@ describe LinkedList do
       list = LinkedList.new(Node.new(1))
       expect(list.find(1)).to eq(0)
     end
+
+    it "returns index if item found in longer list" do
+      list = LinkedList.new(Node.new(0))
+      list.append(Node.new(1))
+      list.append(Node.new(2))
+      list.append(Node.new(3))
+      expect(list.find(3)).to eq(3)
+    end
   end
 end
