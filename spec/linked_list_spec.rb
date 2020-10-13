@@ -104,4 +104,12 @@ describe LinkedList do
       expect(list.at(2).value).to eq(2)
     end
   end
+
+  describe "#pop" do
+    it "does nothing to an empty list" do
+      list = LinkedList.new
+      list.pop
+      expect(list.head).to eq(nil)
+    end
+  end
 end
