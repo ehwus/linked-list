@@ -47,4 +47,11 @@ describe LinkedList do
       expect(list.tail).to eq(node2)
     end
   end
+
+  describe "#size" do
+    it "returns zero if list is empty" do
+      list = LinkedList.new
+      expect(list.size).to eq(0)
+    end
+  end
 end
