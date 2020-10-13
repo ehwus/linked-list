@@ -11,8 +11,13 @@ describe Node do
     expect(test.value).to eq("Value")
   end
 
-  it "successfully links nodes together" do
+  it "successfully links two nodes together" do
     test = Node.new("Value", Node.new("Test"))
     expect(test.next_node.value).to eq("Test")
+  end
+
+  it "links four nodes together" do
+    test = Node.new("1", Node.new("2", Node.new("3", Node.new("4"))))
+    expect(test.next_node.next_node.next_node.value).to eq("4")
   end
 end
