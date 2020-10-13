@@ -101,6 +101,7 @@ class LinkedList
   end
 
   def to_s
-    return "nil" if @head.nil?
+    pointer = @head
+    return "nil" if pointer.nil?
   end
 end

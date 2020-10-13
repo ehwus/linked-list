@@ -165,5 +165,10 @@ describe LinkedList do
       empty_list = LinkedList.new
       expect(empty_list.to_s).to eq("nil")
     end
+
+    it "returns a single value chained to nil" do
+      list = LinkedList.new("Foo")
+      expect(list.to_s).to eq("( Foo ) -> nil")
+    end
   end
 end
