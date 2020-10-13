@@ -53,5 +53,10 @@ describe LinkedList do
       list = LinkedList.new
       expect(list.size).to eq(0)
     end
+
+    it "returns one if list has one node" do
+      list = LinkedList.new(Node.new(1))
+      expect(list.size).to eq(1)
+    end
   end
 end
