@@ -145,5 +145,10 @@ describe LinkedList do
       empty_list = LinkedList.new
       expect(empty_list.find('foo')).to eq(nil)
     end
+
+    it "returns 0 if item found in first node" do
+      list = LinkedList.new(Node.new(1))
+      expect(list.find(1)).to eq(0)
+    end
   end
 end
