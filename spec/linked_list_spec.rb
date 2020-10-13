@@ -83,4 +83,12 @@ describe LinkedList do
       expect(list.size).to eq(3)
     end
   end
+
+  describe "#at" do
+    it "returns node 0 in list of one element" do
+      node0 = Node.new
+      list = LinkedList.new(node0)
+      expect(list.at(0)).to eq(node0)
+    end
+  end
 end
