@@ -62,6 +62,8 @@ class LinkedList
   end
 
   def pop
-    
+    if @head
+      @head = nil
+    end
   end
 end
