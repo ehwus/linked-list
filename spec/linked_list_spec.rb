@@ -48,6 +48,15 @@ describe LinkedList do
     end
   end
 
+  describe "#prepend" do
+    it "adds a head to an empty list" do
+      list = LinkedList.new
+      node = Node.new(1)
+      list.prepend(node)
+      expect(list.head).to eq(node)
+    end
+  end
+
   describe "#size" do
     it "returns zero if list is empty" do
       list = LinkedList.new
