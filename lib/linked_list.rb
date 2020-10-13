@@ -99,4 +99,8 @@ class LinkedList
       pointer = pointer.next_node
     end
   end
+
+  def to_s
+    return "nil" if @head.nil?
+  end
 end
