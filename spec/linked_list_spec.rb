@@ -139,4 +139,11 @@ describe LinkedList do
       expect(list.contains?(2)).to eq(true)
     end
   end
+
+  describe "#find(value)" do
+    it "returns nil looking in an empty list" do
+      empty_list = LinkedList.new
+      expect(empty_list.find('foo')).to eq(nil)
+    end
+  end
 end
