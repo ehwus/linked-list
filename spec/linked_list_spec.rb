@@ -37,5 +37,14 @@ describe LinkedList do
       list.append(node)
       expect(list.tail).to eq(node)
     end
+
+    it "adds multiple node to the end of a list" do
+      list = LinkedList.new(Node.new(1))
+      node1 = Node.new(1)
+      node2 = Node.new(2)
+      list.append(node1)
+      list.append(node2)
+      expect(list.tail).to eq(node2)
+    end
   end
 end
