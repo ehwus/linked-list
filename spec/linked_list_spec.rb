@@ -159,4 +159,11 @@ describe LinkedList do
       expect(list.find(3)).to eq(3)
     end
   end
+
+  describe "#to_s" do
+    it "returns a nil string from an empty list" do
+      empty_list = LinkedList.new
+      expect(empty_list.to_s).to eq("nil")
+    end
+  end
 end
