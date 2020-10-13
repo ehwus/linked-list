@@ -10,4 +10,9 @@ describe Node do
     test = Node.new("Value")
     expect(test.value).to eq("Value")
   end
+
+  it "successfully links nodes together" do
+    test = Node.new("Value", Node.new("Test"))
+    expect(test.next_node.value).to eq("Test")
+  end
 end
