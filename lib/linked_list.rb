@@ -108,8 +108,8 @@ class LinkedList
     return_string += "( #{pointer.value} ) -> "
 
     until pointer.next_node.nil?
-      return_string += "( #{pointer.value} ) -> "
       pointer = pointer.next_node
+      return_string += "( #{pointer.value} ) -> "
     end
 
     return_string += "nil"
