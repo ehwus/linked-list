@@ -58,5 +58,12 @@ describe LinkedList do
       list = LinkedList.new(Node.new(1))
       expect(list.size).to eq(1)
     end
+
+    it "returns three with three nodes" do
+      list = LinkedList.new(Node.new(1))
+      list.append(Node.new(2))
+      list.append(Node.new(3))
+      expect(list.size).to eq(3)
+    end
   end
 end
