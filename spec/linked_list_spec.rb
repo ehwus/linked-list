@@ -167,8 +167,15 @@ describe LinkedList do
     end
 
     it "returns a single value chained to nil" do
-      list = LinkedList.new("Foo")
+      list = LinkedList.new(Node.new("Foo"))
       expect(list.to_s).to eq("( Foo ) -> nil")
+    end
+
+    it "returns a longer list" do
+      list = LinkedList.new(Node.new("Foo"))
+      list.append(Node.new("Bar"))
+      list.append(Node.new("Baz"))
+      expect(list.to_s).to eq("( Foo ) -> ( Bar ) -> ( Baz ) -> nil")
     end
   end
 end

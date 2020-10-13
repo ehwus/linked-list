@@ -103,5 +103,16 @@ class LinkedList
   def to_s
     pointer = @head
     return "nil" if pointer.nil?
+
+    return_string = ""
+    return_string += "( #{pointer.value} ) -> "
+
+    until pointer.next_node.nil?
+      return_string += "( #{pointer.value} ) -> "
+      pointer = pointer.next_node
+    end
+
+    return_string += "nil"
+    return return_string
   end
 end
