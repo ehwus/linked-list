@@ -50,5 +50,14 @@ class LinkedList
 
   def at(index)
     return @head if index == 0
+
+    counter = 0
+    pointer = @head
+    until pointer.next_node.nil?
+      return pointer if counter == index
+
+      counter += 1
+      pointer = pointer.next_node
+    end
   end
 end
