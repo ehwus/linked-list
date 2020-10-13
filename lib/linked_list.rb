@@ -25,4 +25,8 @@ class LinkedList
     pointer = pointer.next_node until pointer.next_node.nil?
     pointer
   end
+
+  def size
+    0 if @head.nil?
+  end
 end
