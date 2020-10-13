@@ -27,6 +27,14 @@ class LinkedList
   end
 
   def size
-    0 if @head.nil?
+    return 0 if @head.nil?
+
+    count = 1
+    pointer = @head
+    until pointer.next_node.nil?
+      count += 1
+      pointer = pointer.next_node
+    end
+    count
   end
 end
