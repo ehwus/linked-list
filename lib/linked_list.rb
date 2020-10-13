@@ -86,6 +86,9 @@ class LinkedList
   end
 
   def find(search_term)
+    return nil if @head.nil?
 
+    index = 0
+    return index if @head.value == search_term
   end
 end
