@@ -55,6 +55,14 @@ describe LinkedList do
       list.prepend(node)
       expect(list.head).to eq(node)
     end
+
+    it "changes head to list of one, keeping order" do
+      list = LinkedList.new(Node.new(1))
+      node2 = Node.new(2)
+      list.prepend(node2)
+      expect(list.head).to eq(node2)
+      expect(list.tail).to eq(Node.new(1))
+    end
   end
 
   describe "#size" do
