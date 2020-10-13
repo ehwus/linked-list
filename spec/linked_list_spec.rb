@@ -60,8 +60,8 @@ describe LinkedList do
       list = LinkedList.new(Node.new(1))
       node2 = Node.new(2)
       list.prepend(node2)
-      expect(list.head).to eq(node2)
-      expect(list.tail).to eq(Node.new(1))
+      expect(list.head.value).to eq(2)
+      expect(list.tail.value).to eq(1)
     end
   end
 
