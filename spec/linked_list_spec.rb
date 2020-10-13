@@ -90,5 +90,10 @@ describe LinkedList do
       list = LinkedList.new(node0)
       expect(list.at(0)).to eq(node0)
     end
+    it "returns nil in list of one element if given 1" do
+      node0 = Node.new
+      list = LinkedList.new(node0)
+      expect(list.at(1)).to eq(nil)
+    end
   end
 end
