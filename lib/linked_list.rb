@@ -74,9 +74,9 @@ class LinkedList
   def contains?(search_term)
     return false if @head.nil?
 
-    pointer = @head
-    return true if pointer.value == search_term
+    return true if @head.value == search_term
 
+    pointer = @head
     until pointer.next_node.nil?
       return true if pointer.value == search_term
 
