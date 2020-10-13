@@ -60,4 +60,8 @@ class LinkedList
       pointer = pointer.next_node
     end
   end
+
+  def pop
+    
+  end
 end

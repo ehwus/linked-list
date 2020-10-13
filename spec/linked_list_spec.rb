@@ -111,5 +111,11 @@ describe LinkedList do
       list.pop
       expect(list.head).to eq(nil)
     end
+
+    it "removes head of single item list" do
+      list = LinkedList.new(Node.new(1))
+      list.pop
+      expect(list.head).to eq(nil)
+    end
   end
 end
