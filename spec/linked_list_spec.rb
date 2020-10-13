@@ -24,11 +24,18 @@ end
 
 describe LinkedList do
   describe "#append(value)" do
-    it "adds a value as head to an empty list" do
+    it "adds a node as head to an empty list" do
       list = LinkedList.new
       node = Node.new(1)
       list.append(node)
       expect(list.head).to eq(node)
+    end
+
+    it "adds a node to the end of a list of one" do
+      list = LinkedList.new(Node.new(1))
+      node = Node.new(2)
+      list.append(node)
+      expect(list.tail).to eq(node)
     end
   end
 end
