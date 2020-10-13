@@ -131,7 +131,7 @@ describe LinkedList do
   describe "#contains" do
     it "returns false searching an empty list" do
       empty_list = LinkedList.new
-      expect(empty_list.contains('foo')).to eq(false)
+      expect(empty_list.contains?('foo')).to eq(false)
     end
   end
 end

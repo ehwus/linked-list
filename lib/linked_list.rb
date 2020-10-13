@@ -70,4 +70,8 @@ class LinkedList
       @head = @head.next_node
     end
   end
+
+  def contains?(search_term)
+    false
+  end
 end
