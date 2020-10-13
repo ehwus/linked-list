@@ -47,4 +47,8 @@ class LinkedList
     end
     count
   end
+
+  def at(index)
+    return @head if index == 0
+  end
 end
