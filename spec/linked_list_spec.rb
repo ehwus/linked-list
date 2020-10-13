@@ -95,5 +95,13 @@ describe LinkedList do
       list = LinkedList.new(node0)
       expect(list.at(1)).to eq(nil)
     end
+    it "returns node from deeper into list" do
+      node0 = Node.new(0)
+      list = LinkedList.new(node0)
+      list.append(Node.new(1))
+      list.append(Node.new(2))
+      list.append(Node.new(3))
+      expect(list.at(2).value).to eq(2)
+    end
   end
 end
